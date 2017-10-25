@@ -1,0 +1,19 @@
+{
+  "name": "icq",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "electron src",
+    "build:darwin": "electron-packager src ICQ --version 0.1.0 --out ./out --overwrite --asar --icon=./src/icon.icns --platform darwin --arch x64",
+    "build:win32": "electron-packager src ICQ --version 0.1.0 --out ./out --overwrite --asar --icon=./src/icon.icns --platform win32",
+    "build": "npm run build:darwin & npm run build:win32"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "1.7.9",
+    "electron-packager": "^9.1.0"
+  }
+}
